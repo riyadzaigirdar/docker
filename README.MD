@@ -12,3 +12,37 @@
 
 #### -> the last nginx is the image in dockerhub that it pulls from and builds a container...remember each container is built from a image that means you can run several container from a image. So, there can be multiple instances (container) of a image.
 
+# List docker containers
+
+## List running and stopped containers(two ways and ps is the old way)
+
+    $: docker container ls -a
+    
+    $: docker ps -a
+
+## List only running containers(two ways and ps is the old way)
+
+    $: docker container ls
+    
+    $: docker ps
+
+# List docker images
+    
+    $: docker images   
+    
+    REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+    nginx        latest    62d49f9bab67   2 weeks ago   133MB
+
+# Delete docker image
+
+    $ docker image rm 62d
+   
+#### -> Important Note: Sometimes need to add the -f flag if the image is being used by a container... 
+
+# Pull a image from docker hub at any time
+
+    -> docker pull nginx
+    
+    
+
+    
