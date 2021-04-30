@@ -52,6 +52,7 @@
 
     -> docker pull nginx
     
+# get inside a container
     
-
+    docker exec -it <container name> /bin/bash
     
