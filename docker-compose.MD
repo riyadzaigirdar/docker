@@ -53,7 +53,10 @@
 
     services:
         app: <-- service name
-        
+          conitainer_name: python-app-container <-- name the container so you can detect in docker ps -a
+          
+          restart: always <-- restart if anything changes in the service
+          
           build: . <-- point to the specific docker file directory
           
           build: <-- you can also write it like that for flexible
@@ -76,11 +79,11 @@
             - DB_USER=postgres
             - DB_PASS=supersecretpassword
           
-          depends_on: < -- it will wait for db service to start and link with db service
+          depends_on: < -- it will wait for db service to start and link with db service and host and folders inside container not accessible by other container
           
             - db
             
-          link: < -- it will only link with db service
+          link: < -- it will only link with db service and host and folders inside this container accessible by other container and services
           
             - db
           
